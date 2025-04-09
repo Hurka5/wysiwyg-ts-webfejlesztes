@@ -1,0 +1,4 @@
+<div id="code-editor-holder" (click)="focusEditor()">
+  <div id="line-numbers" (click)="focusEditor()">{{lineNums}}</div>
+  <div #codeEditor id="code-editor" contenteditable (input)="updateText($event)" [innerText]="code"></div>
+</div>
