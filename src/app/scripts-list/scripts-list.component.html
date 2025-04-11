@@ -1,1 +1,9 @@
 <p>scripts-list works!</p>
+<button (click)="addItem()">Add Item</button>
+
+<div id="script-holder">
+  <div *ngFor="let item of this.items">
+    <p>{{ item }}</p>
+    <button (click)="test()">BUTTON</button>
+  </div>
+</div>

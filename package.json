@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:wysiwyg-ts-webfejlesztes": "node dist/wysiwyg-ts-webfejlesztes/server/server.mjs"
+    "serve:ssr:wysiwyg-ts-webfejlesztes": "node dist/wysiwyg-ts-webfejlesztes/server/server.mjs",
+    "deploy": "ng build --configuration production && firebase deploy"
   },
   "private": true,
   "dependencies": {
