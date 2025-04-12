@@ -1,0 +1,41 @@
+<div class="form-container">
+  <h1>Create new script</h1>
+
+  <form [formGroup]="formdata" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name" placeholder="Enter your name" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Description</mat-label>
+      <textarea
+        matInput
+        formControlName="desc"
+        placeholder="Enter description"
+      ></textarea>
+    </mat-form-field>
+
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Code</mat-label>
+        <textarea
+          matInput
+          formControlName="code"
+          placeholder="Enter your code"
+        ></textarea>
+      </mat-form-field>
+      <div id="console" #console>
+        <!-- ngfor through output and write out outputs in div -->
+        <div *ngFor="let output of outputs">
+          <!-- set p class to "console-" + output.type -->
+          <p [ngClass]="'console-' + output.type">
+            {{ output.msg }}
+          </p>
+        </div>
+      </div>
+    </div>
+    <button mat-button (click)="runScript()">Run</button>
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+  </form>
+</div>

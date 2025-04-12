@@ -1,0 +1,16 @@
+mat-toolbar {
+  background-color: #3f51b5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+mat-toolbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+.active-link {
+  border-bottom: white solid 3px;
+  border-radius: 3px;
+}

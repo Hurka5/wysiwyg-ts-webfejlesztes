@@ -1,0 +1,29 @@
+.card-container {
+  display: flex;
+  flex-direction: column; /* Stack cards vertically */
+  align-items: stretch; /* Stretch cards to fill the container width */
+  gap: 16px; /* Space between cards */
+  margin-top: 16px;
+  padding: 0 16px; /* Add padding to prevent cards from touching the edges */
+}
+
+mat-card {
+  width: 100%; /* Ensure cards stretch to 100% of the container width */
+  max-width: 100%; /* Ensure cards don't exceed the container's width */
+  margin: 16px 0; /* Vertical margin between cards */
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1024px) {
+  .card-container {
+    padding: 0 8px; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    padding: 0 8px; /* Further reduce padding on mobile screens */
+  }
+}
