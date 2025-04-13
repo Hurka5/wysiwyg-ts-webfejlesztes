@@ -1,6 +1,7 @@
 <div class="card-container">
   <h1>Scripts</h1>
-  <button mat-raised-button (click)="addScript()">Add</button>
+  <button mat-raised-button (click)="clearScripts()">Clear (Debug)</button>
+  <button mat-raised-button (click)="addScript()">Add (Debug)</button>
   <div *ngFor="let script of scripts$ | async; let i = index">
     <mat-card class="script-card">
       <mat-card-header>
@@ -14,9 +15,18 @@
       </mat-card-content>
 
       <mat-card-actions>
+        <button mat-button (click)="viewScript(script)">View</button>
         <button mat-button (click)="editScript(script)">Edit</button>
         <button mat-button (click)="deleteScript(script)">Delete</button>
       </mat-card-actions>
     </mat-card>
   </div>
 </div>
+
+<!-- DIALOG  -->
+<app-edit-code-dialog
+  *ngIf="showDialog"
+  [code]="editCode"
+  (close)="handleDialogClose($event)"
+>
+</app-edit-code-dialog>

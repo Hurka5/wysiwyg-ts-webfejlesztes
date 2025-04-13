@@ -7,4 +7,11 @@ export const routes: Routes = [
   { path: "", component: HomeComponent, title: "Home" },
   { path: "new", component: AddScriptComponent, title: "New script" },
   { path: "list", component: ScriptListComponent, title: "Script list" },
+  {
+    path: "script/:id",
+    loadComponent: () =>
+      import("./components/script-detail/script-detail.component").then(
+        (m) => m.ScriptDetailComponent,
+      ),
+  },
 ];

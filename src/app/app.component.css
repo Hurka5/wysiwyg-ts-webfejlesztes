@@ -5,6 +5,11 @@ mat-toolbar {
   align-items: center;
 }
 
+router-outlet {
+  width: 100vw;
+  height: 100vh;
+}
+
 mat-toolbar a {
   color: white;
   text-decoration: none;

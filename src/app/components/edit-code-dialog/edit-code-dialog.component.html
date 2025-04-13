@@ -1,0 +1,20 @@
+<div class="backdrop" (click)="cancel()">
+  <div class="dialog" (click)="$event.stopPropagation()">
+    <form (ngSubmit)="save()">
+      <h3 mat-dialog-title>Add meg a szerkesztő kódot:</h3>
+      <mat-form-field appearance="fill">
+        <textarea [(ngModel)]="editableCode" rows="6" cols="40"></textarea>
+      </mat-form-field>
+      <br />
+      <button mat-raised-button color="primary" type="submit">Ok</button>
+      <button
+        mat-raised-button
+        color="primary"
+        type="button"
+        (click)="cancel()"
+      >
+        Cancel
+      </button>
+    </form>
+  </div>
+</div>
