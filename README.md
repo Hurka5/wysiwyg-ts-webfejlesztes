@@ -1,59 +1,50 @@
-# WysiwygTsWebfejlesztes
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.7.
+# Webfejlesztés projekt
+Téma: WYSIWYG TypeScript forráskód szerkesztő alkalmazás menthető kódokkal (playground)
+Készítette: Ágoston Gergő
+Neptun kód: DCKNNN
 
-## Development server
+# 1. Mérföldkő
+Kész:
+- Fordítási hiba nincs (ng serve kiadásakor nincs hiba)
+- Futtatási hiba nincs (böngésző konzol részében nincs hiba)
+- Alkalmazás felbontása megfelelő számú komponensre (egyetlen komponens TS és HTML kódja sem haladja meg a 250 sort és soronként a 400 karaktert)
+- Legalább 10 különböző Material elem helyes használata.
+  1. [MatButton](../src/app/app.component.html)
+  2. [MatToolbar](../src/app/app.component.html)
+  3. [MatIcon](../src/app/app.component.html)
+  4. [MatLabel](../src/app/components/add-script/add-script.component.html)
+  5. [MatInput](../src/app/components/add-script/add-script.component.html)
+  6. [MatFormField](../src/app/components/add-script/add-script.component.html)
+  7. [MatCard](../src/app/components/list-scripts/list-scripts.component.html)
+  8. [MatList](../src/app/components/list-scripts/list-scripts.component.html)
+  9. [MatTooltipModule](../src/app/app.component.html)
+  10. [MatDialog](../src/app/components/script-creation-dialog/script-creation-dialog.component.ts)
+  
+- Legalább 2 különböző beépített vezérlési folyamat használata (if, switch, for)
+  1. [ngIf](../src/app/components/add-script/add-script.component.html)
+  2. [ngFor](../src/app/components/add-script/add-script.component.html)
+  
+- Legalább 1 saját Pipe osztály írása és használata
+  1. [SpacePipe](../src/app/pipes/space.pipe.ts)
 
-To start a local development server, run:
+Folyamatban:
+- Reszponzív, mobile-first felület (minden adat látható és jól jelenik meg böngészőben is, mobil nézetben is)
+- Adatmodell definiálása (legalább 4 TypeScript interfész vagy class formájában (ugyanennyi kollekció))
+ 1. [Script](../src/app/models/script.model.ts)
+ 2. [ConsoleLog](../src/app/models/console-log.model.ts)
+ 3. [AsciiArt](../src/app/models/ascii-art.model.ts)
+ 
+- Adatátadás szülő és gyermek komponensek között (legalább 1 @Input és 1 @Output)
+  1. [@Input]()
+  2. [@Output]()
+  
+- Adatbevitel Angular form-ok segítségével megvalósítva (legalább 2)
+  1. [Add script component](../src/app/components/add-script/add-script.component.ts)
+  2. [Delete/Edit script]()
 
-```bash
-ng serve
-```
+- Legalább 2 különböző attribútum direktíva használata
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+# 2. Mérföldkő
+TODO

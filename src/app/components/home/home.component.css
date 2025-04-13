@@ -1,0 +1,52 @@
+mat-card {
+  margin: auto;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1em;
+  margin-bottom: 3em;
+  border: none;
+}
+
+mat-grid-tile {
+  background-color: #171717;
+  border-radius: 1em;
+  color: white;
+  white-space: pre-line;
+  line-height: 1em;
+  font-size: 16px;
+  font-family: monospace;
+  margin: 1em;
+}
+
+.tag {
+  position: absolute;
+  /* set position to center*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0;
+  text-align: center;
+}
+
+mat-grid-tile:hover {
+  transform: scale(1.01);
+}
+
+mat-grid-tile:hover .tag {
+  animation: fadeIn 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+.tag h1 {
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 10px blue;
+}

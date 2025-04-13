@@ -6,6 +6,8 @@ import { FormControl, FormGroup, ReactiveFormsModule } from "@angular/forms";
 import * as ts from "typescript";
 import { ConsoleLog } from "../../models/console-log.model";
 import { CommonModule } from "@angular/common";
+import { MatDialog } from "@angular/material/dialog";
+import { ScriptCreationDialogComponent } from "../script-creation-dialog/script-creation-dialog.component";
 
 @Component({
   selector: "app-add-script",
@@ -32,7 +34,7 @@ export class AddScriptComponent {
 
   formdata: FormGroup;
 
-  constructor() {
+  constructor(private dialog: MatDialog) {
     this.formdata = new FormGroup({
       name: new FormControl("Super script name"),
       desc: new FormControl("This is a description..."),
@@ -40,7 +42,11 @@ export class AddScriptComponent {
     });
   }
 
-  onSubmit() {}
+  onSubmit() {
+    this.dialog.open(ScriptCreationDialogComponent, {
+      data: { editCode: "8CuG27Bs0YvwVHJQ8P0o" },
+    });
+  }
 
   runScript() {
     // Clear the console
@@ -90,7 +96,5 @@ export class AddScriptComponent {
     console.log = originalLog;
     console.error = originalError;
   }
-  ngOnInit() {
-    console.log(this.consoleRef);
-  }
+  ngOnInit() {}
 }

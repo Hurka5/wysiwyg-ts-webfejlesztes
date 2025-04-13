@@ -1,16 +1,27 @@
 <mat-toolbar color="primary">
   <a
     mat-button
+    matTooltip="Home"
     [routerLinkActiveOptions]="{ exact: true }"
     routerLinkActive="active-link"
     routerLink="/"
   >
     <mat-icon>home</mat-icon>
   </a>
-  <a mat-button routerLinkActive="active-link" routerLink="/new">
+  <a
+    mat-button
+    matTooltip="New script"
+    routerLinkActive="active-link"
+    routerLink="/new"
+  >
     <mat-icon>add_box</mat-icon>
   </a>
-  <a mat-button routerLinkActive="active-link" routerLink="/list">
+  <a
+    mat-button
+    matTooltip="Script list"
+    routerLinkActive="active-link"
+    routerLink="/list"
+  >
     <mat-icon>library_books</mat-icon>
   </a>
 </mat-toolbar>

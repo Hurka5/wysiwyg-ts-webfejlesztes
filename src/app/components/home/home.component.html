@@ -1,0 +1,20 @@
+<mat-card appearance="outlined">
+  <mat-card-header>
+    <mat-card-title>Create your own ascii masterpiece!</mat-card-title>
+    <mat-card-subtitle
+      >Write your own script and share it with others!</mat-card-subtitle
+    >
+  </mat-card-header>
+</mat-card>
+
+<mat-grid-list cols="2" rowHeight="2:1" gutterSize="2em">
+  <!-- loop through arts with ngfor -->
+  <div *ngFor="let art of arts">
+    <mat-grid-tile>
+      <pre>{{ art.data | space }}</pre>
+      <div class="tag">
+        <h1>{{ art.name }}</h1>
+      </div>
+    </mat-grid-tile>
+  </div>
+</mat-grid-list>

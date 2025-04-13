@@ -42,7 +42,5 @@ export class ScriptListComponent implements OnInit {
 
   deleteScript(script: Script): void {}
 
-  ngOnInit(): void {
-    console.log("page loaded");
-  }
+  ngOnInit(): void {}
 }

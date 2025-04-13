@@ -30,12 +30,13 @@
         <div *ngFor="let output of outputs">
           <!-- set p class to "console-" + output.type -->
           <p [ngClass]="'console-' + output.type">
+            <span *ngIf="output.type == 'error'">Error:</span>
             {{ output.msg }}
           </p>
         </div>
       </div>
     </div>
-    <button mat-button (click)="runScript()">Run</button>
+    <button mat-button (click)="runScript()" type="button">Run</button>
     <button mat-raised-button color="primary" type="submit">Submit</button>
   </form>
 </div>
